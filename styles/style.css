@@ -1,0 +1,656 @@
+body {
+  overflow-x: hidden;
+}
+
+* {
+  font-family: Montserrat, sans-serif;
+}
+
+.burgerMenu {
+  transition: 0.2s;
+  transform: translateX(-150%);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  background: rgba(55, 55, 55, 0.98);
+}
+.burgerMenu .close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: white;
+  cursor: pointer;
+}
+.burgerMenu ul {
+  width: 100vw;
+}
+.burgerMenu ul li {
+  text-transform: uppercase;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  padding: 30px;
+  font-size: 30px;
+  color: white;
+  font-weight: 800;
+  transition: transform 0.2s;
+}
+.burgerMenu ul li a {
+  color: white;
+}
+.burgerMenu ul li:hover {
+  background: #fff;
+  transform: translateX(30px);
+}
+.burgerMenu ul li:hover a {
+  color: #000;
+}
+
+.burgerMenu.open {
+  transform: translateX(0);
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  background: #eff0f2;
+}
+
+.container {
+  height: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.headerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+.headerTop .logo {
+  cursor: pointer;
+  text-shadow: 0 0 2px rgba(21, 21, 22, 0.75);
+  color: #000000;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+  letter-spacing: 1.02px;
+  border: 6px solid #170f1c;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.headerTop .logo span {
+  color: #77efe5;
+  font-size: 21px;
+  letter-spacing: 1.26px;
+}
+.headerTop .burger {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.headerTop .burger span {
+  margin: 2px;
+  display: inline-block;
+  border: 2px solid;
+  border-radius: 2px;
+  background-color: #fff;
+  opacity: 0.6;
+}
+
+.headerContent {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  text-shadow: 4px 8px 10px rgba(0, 0, 0, 0.24);
+  color: #505050;
+  font-size: 45px;
+  line-height: 45px;
+  text-transform: uppercase;
+  letter-spacing: 2.7px;
+}
+.headerContent span {
+  background: rgba(118, 244, 234, 0.4);
+}
+.headerContent h1 {
+  font-weight: 700;
+  display: inline-block;
+}
+.headerContent h2 {
+  line-height: 55px;
+  font-weight: 700;
+}
+
+.headerButton {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.headerButton span {
+  display: inline-block;
+  cursor: pointer;
+  opacity: 0.75;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  text-transform: uppercase;
+  letter-spacing: 2.16px;
+  border-radius: 2px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  padding: 15px 30px;
+  transition: 0.3s;
+}
+.headerButton span:hover {
+  border: 2px solid black;
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.glass {
+  position: absolute;
+  right: 30px;
+}
+
+.sectionTop {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  text-align: center;
+  opacity: 0.9;
+  color: #1f1f1f;
+  font-size: 38px;
+  line-height: 28px;
+  text-transform: uppercase;
+  letter-spacing: 2.28px;
+}
+.sectionTop h2 {
+  font-weight: 700;
+}
+.sectionTop h3 {
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-family: Raleway, sans-serif;
+}
+
+section {
+  padding-bottom: 100px;
+}
+
+.aboutUs {
+  overflow-x: hidden;
+}
+.aboutUs .sectionsContent {
+  display: flex;
+  justify-content: space-around;
+}
+.aboutUs .sectionsContent .images {
+  flex-basis: 40%;
+  display: flex;
+}
+.aboutUs .sectionsContent .images img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+.aboutUs .sectionsContent .desc {
+  padding-top: 30px;
+  flex-basis: 50%;
+}
+.aboutUs .sectionsContent .desc h4 {
+  opacity: 0.95;
+  font-family: Merriweather, sans-serif;
+  color: #000000;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  padding-bottom: 30px;
+}
+.aboutUs .sectionsContent .desc p {
+  font-family: Raleway, sans-serif;
+  padding-bottom: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+}
+
+.sectionsContent {
+  display: flex;
+  justify-content: space-around;
+}
+.sectionsContent .images {
+  flex-basis: 40%;
+  display: flex;
+}
+.sectionsContent .images img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+.sectionsContent .desc {
+  padding-top: 30px;
+  flex-basis: 50%;
+}
+.sectionsContent .desc h4 {
+  opacity: 0.95;
+  font-family: Merriweather, sans-serif;
+  color: #000000;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  padding-bottom: 30px;
+}
+.sectionsContent .desc p {
+  font-family: Raleway, sans-serif;
+  padding-bottom: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+}
+
+.featuredWorks {
+  background: #eaeaea;
+}
+.featuredWorks .sectionsContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.featuredWorks .sectionsContent .card {
+  position: relative;
+  perspective: 1000px;
+  min-width: 250px;
+  height: 250px;
+  margin: 5px;
+}
+.featuredWorks .sectionsContent .card img, .featuredWorks .sectionsContent .card .flip {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+  backface-visibility: hidden;
+}
+.featuredWorks .sectionsContent .card .flip {
+  padding: 0 10px;
+  transform: rotateY(180deg);
+}
+.featuredWorks .sectionsContent .card:hover img {
+  transform: rotateY(180deg);
+}
+.featuredWorks .sectionsContent .card:hover .flip {
+  transform: rotateY(360deg);
+}
+
+.ourService .sectionsContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.ourService .sectionsContent .blockWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 140px 10px 0 40px;
+}
+.ourService .sectionsContent .block {
+  margin: 5px;
+  width: 100%;
+  flex-basis: 40%;
+  height: 400px;
+  position: relative;
+  color: white;
+}
+.ourService .sectionsContent .block h4 {
+  padding-bottom: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 29px;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.ourService .sectionsContent .block p {
+  padding-bottom: 20px;
+  font-family: Merriweather, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 25px;
+  text-align: left;
+}
+.ourService .sectionsContent .block img {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  object-fit: cover !important;
+}
+.ourService .sectionsContent .block .overlay {
+  z-index: -2;
+  opacity: 0;
+  transition: 0.2s;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #70f4e9;
+  color: #1f1f1f;
+}
+.ourService .sectionsContent .block .overlay.openOverlay {
+  z-index: 5;
+  opacity: 1;
+}
+.ourService .sectionsContent .block .button, .ourService .sectionsContent .block .closeOverlay {
+  cursor: pointer;
+  position: relative;
+}
+.ourService .sectionsContent .block .button {
+  display: flex;
+  align-items: center;
+}
+.ourService .sectionsContent .block .button i {
+  padding-left: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+.ourService .sectionsContent .block .closeOverlay {
+  width: 25px;
+  height: 25px;
+}
+.ourService .sectionsContent .block .button:after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.ourService .sectionsContent .block:nth-child(odd) {
+  flex-basis: 55%;
+}
+.ourService .sectionsContent .block.re {
+  flex-basis: 55%;
+}
+.ourService .sectionsContent .block.re:nth-child(odd) {
+  flex-basis: 40%;
+}
+
+.smallTeam {
+  background: #eaeaea;
+}
+.smallTeam .sectionsContent {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.smallTeam .sectionsContent .member {
+  display: flex;
+  margin: 2.5px;
+  position: relative;
+  overflow: hidden;
+}
+.smallTeam .sectionsContent .member img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.smallTeam .sectionsContent .member:hover .memberOverlay {
+  transform: translateY(100%);
+}
+.smallTeam .sectionsContent .member .memberOverlay {
+  font-family: Merriweather, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 24px;
+  position: absolute;
+  top: 0;
+  bottom: 50%;
+  left: 10px;
+  right: 10px;
+  padding: 30px;
+  background: #70f4e9;
+  transition: 0.2s;
+  transform: translateY(200%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.smallTeam .sectionsContent .member .memberOverlay h4 {
+  font-weight: 700;
+}
+.smallTeam .sectionsContent .member .memberOverlay h4 span {
+  font-size: 14px;
+  font-weight: 400;
+}
+.smallTeam .sectionsContent .member .memberOverlay p {
+  padding: 10px 0;
+  font-family: Raleway, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+.smallTeam .sectionsContent .member .social {
+  display: flex;
+}
+.smallTeam .sectionsContent .member .social .icon {
+  font-size: 18px;
+  cursor: pointer;
+}
+.smallTeam .sectionsContent .member .memberOverlay.memberOverlayOpen {
+  left: 0;
+  right: 0;
+}
+
+.theySays {
+  overflow-x: hidden;
+  position: relative;
+}
+.theySays .sectionsContent {
+  display: flex;
+  align-items: center;
+}
+.theySays .sectionsContent .desc {
+  position: relative;
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #dddddd;
+}
+.theySays .sectionsContent .desc .stars {
+  display: flex;
+}
+.theySays .sectionsContent .desc h3 {
+  font-family: Merriweather, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 24px;
+  font-weight: 700;
+}
+.theySays .sectionsContent .desc h3 span {
+  font-size: 14px;
+  font-weight: 400;
+}
+.theySays .sectionsContent .desc p {
+  padding: 20px 0;
+  font-family: Raleway, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+.theySays .control {
+  position: absolute;
+  bottom: -50px;
+  right: 0;
+  display: flex;
+  font-size: 30px;
+  color: #70f4e9;
+}
+.theySays .control span {
+  margin: 5px;
+}
+.theySays .control span:hover {
+  color: #49a29a;
+}
+
+.logos {
+  padding: 100px 20px;
+  background: #eaeaea;
+}
+
+.contactBlock {
+  background-size: cover;
+  background: url("bg.png") no-repeat fixed center;
+  font-family: Raleway, sans-serif;
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+.contactBlock .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.contactBlock .container .form, .contactBlock .container .contact {
+  flex-basis: 45%;
+  width: 100%;
+  background-color: rgba(2, 22, 35, 0.6);
+  padding: 15px;
+  color: #fff;
+}
+.contactBlock .container form {
+  background: transparent !important;
+  display: flex;
+  flex-direction: column;
+}
+.contactBlock .container form input, .contactBlock .container form textarea {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+  color: #ffffff;
+  font-family: Raleway, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  padding: 20px 0 10px 0;
+  text-align: left;
+  background: transparent;
+  resize: none;
+}
+.contactBlock .container form input::-webkit-input-placeholder, .contactBlock .container form textarea::-webkit-input-placeholder {
+  color: #fff;
+}
+.contactBlock .container form input:nth-child(1), .contactBlock .container form textarea:nth-child(1) {
+  padding-top: 0;
+}
+.contactBlock .container form .formButton {
+  margin-top: 20px;
+  padding: 15px;
+  color: #fff;
+  width: 50%;
+  border: 1px solid #fff;
+  background: transparent;
+  text-align: center;
+}
+.contactBlock .container form .formButton:hover {
+  background: #70f4e9;
+  color: #1f1f1f;
+  border: 1px solid transparent;
+}
+.contactBlock .container .contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contactBlock .container .contact .addressBlock {
+  padding-top: 15px;
+  font-family: Raleway, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+.contactBlock .container .contact .addressBlock .email {
+  padding-top: 20px;
+}
+
+footer {
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #dddddd;
+  text-transform: uppercase;
+  background: #262b2e;
+}
+footer .followUs {
+  padding-bottom: 20px;
+  font-size: 26px;
+}
+footer .social {
+  padding-top: 5px;
+  font-size: 16px;
+  line-height: 36px;
+}
+footer .social span {
+  transition: 0.1s;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background: #424648;
+}
+footer .social span a {
+  display: none;
+  font-size: 12px;
+  color: #1f1f1f;
+  line-height: 12px;
+  margin-left: 15px;
+}
+footer .social span:hover {
+  padding-left: 5px;
+  width: 150px;
+  justify-content: flex-start;
+  background: #70f4e9;
+  color: #242424;
+}
+footer .social span:hover a {
+  display: block;
+}
+footer .cop {
+  font-size: 12px;
+}
+
+/*# sourceMappingURL=style.css.map */

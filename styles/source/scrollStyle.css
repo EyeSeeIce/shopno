@@ -1,0 +1,30 @@
+::-webkit-scrollbar-button {
+  background-repeat: no-repeat;
+  width: 0px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  background-color: #95e1d3;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #56999f;
+}
+
+::-webkit-resizer {
+  background-repeat: no-repeat;
+  width: 4px;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/*# sourceMappingURL=scrollStyle.css.map */

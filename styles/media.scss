@@ -1,0 +1,115 @@
+$breakpoints: ("phone": 400px,
+        "phone-wide": 480px,
+        "phablet": 550px,
+        "tablet-small": 640px,
+        "tablet": 868px,
+        "tablet-wide": 1024px,
+        "desktop": 1248px,
+        "desktop-wide": 1440px);
+
+@mixin mq($width, $type: max) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+
+    @if $type==min {
+      $width: $width - 1px;
+    }
+
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+@include mq('tablet') {
+  .contactBlock {
+    .container {
+      flex-direction: column !important;
+
+      .form, .contact {
+        width: 90% !important;
+        margin: 0 auto;
+        margin-top: 10px;
+      }
+    }
+  }
+  .theySays{
+    .desc{
+      padding: 60px 20px !important;
+    }
+  }
+  .ourService{
+    .blockWrapper{
+      padding: 100px 10px 0 40px !important;
+    }
+  }
+}
+
+@include mq('tablet-small'){
+  .ourService{
+    .sectionsContent{
+      flex-direction: column;
+      .blockWrapper{
+        padding: 100px 10px 100px 40px !important;
+      }
+    }
+  }
+  .theySays{
+    .sectionsContent{
+      padding: 0 10px;
+      flex-direction: column !important;
+      .control{
+        bottom: 0 !important;
+      }
+    }
+  }
+}
+
+@include mq('phablet'){
+  .headerContent{
+    font-size: 36px !important;
+  }
+  .glass{
+    display: none;
+  }
+  .aboutUsSlider{
+    .sectionsContent{
+      flex-direction: column;
+      .desc{
+        padding: 10px;
+      }
+    }
+  }
+}
+
+@include mq('phone-wide'){
+  .sectionTop{
+    padding: 0 5px;
+  }
+}
+
+@include mq('phone'){
+  .ourService{
+    .sectionsContent{
+      flex-direction: column;
+      .blockWrapper{
+        padding: 50px 10px 100px 40px !important;
+      }
+      .block{
+        width: auto !important;
+      }
+      .overlay{
+        p{
+          font-size: 14px !important;
+        }
+      }
+    }
+  }
+  .contactBlock{
+    .container{
+      .form, .contact{
+        width: 100% !important;
+      }
+    }
+  }
+}

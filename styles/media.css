@@ -1,0 +1,75 @@
+@media only screen and (max-width: 868px) {
+  .contactBlock .container {
+    flex-direction: column !important;
+  }
+  .contactBlock .container .form, .contactBlock .container .contact {
+    width: 90% !important;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+
+  .theySays .desc {
+    padding: 60px 20px !important;
+  }
+
+  .ourService .blockWrapper {
+    padding: 100px 10px 0 40px !important;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .ourService .sectionsContent {
+    flex-direction: column;
+  }
+  .ourService .sectionsContent .blockWrapper {
+    padding: 100px 10px 100px 40px !important;
+  }
+
+  .theySays .sectionsContent {
+    padding: 0 10px;
+    flex-direction: column !important;
+  }
+  .theySays .sectionsContent .control {
+    bottom: 0 !important;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .headerContent {
+    font-size: 36px !important;
+  }
+
+  .glass {
+    display: none;
+  }
+
+  .aboutUsSlider .sectionsContent {
+    flex-direction: column;
+  }
+  .aboutUsSlider .sectionsContent .desc {
+    padding: 10px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .sectionTop {
+    padding: 0 5px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .ourService .sectionsContent {
+    flex-direction: column;
+  }
+  .ourService .sectionsContent .blockWrapper {
+    padding: 50px 10px 100px 40px !important;
+  }
+  .ourService .sectionsContent .block {
+    width: auto !important;
+  }
+  .ourService .sectionsContent .overlay p {
+    font-size: 14px !important;
+  }
+
+  .contactBlock .container .form, .contactBlock .container .contact {
+    width: 100% !important;
+  }
+}
+
+/*# sourceMappingURL=media.css.map */
